@@ -21,6 +21,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - run: python3 generate.py
       - run: mkdir dist && mv *.html dist
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
